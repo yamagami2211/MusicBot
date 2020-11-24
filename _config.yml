@@ -6,6 +6,7 @@ description: Fork元の非公式日本語化サイトです。
 url: "https://yamagami2211.github.io/MusicBot-jp/"
 logo: 'images/logo.png'
 google_analytics_key: G-2EWS5XTDBT
+google_tag_key: GTM-N3TPVDP
 show_full_navigation: true
 
 timezone: Asia/Tokyo
