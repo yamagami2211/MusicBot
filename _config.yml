@@ -1,14 +1,14 @@
 # ----
 # Site
 
-title: MusicBot
-description: The documentation for the original MusicBot for Discord.
-url: "https://Just-Some-Bots.github.io/MusicBot"
+title: MusicBot-jp
+description: Fork元の非公式日本語化サイトです。
+url: "https://yamagami2211.github.io/MusicBot-jp/"
 logo: 'images/logo.png'
-google_analytics_key: UA-61418431-2
+google_analytics_key: G-2EWS5XTDBT
 show_full_navigation: true
 
-timezone: Etc/UTC
+timezone: Asia/Tokyo
 permalink: pretty
 
 collections:
