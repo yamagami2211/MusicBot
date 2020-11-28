@@ -5,23 +5,23 @@ order: 7
 ---
 
 <img class="doc-img" src="{{ site.baseurl }}/images/arch.png" alt="centos" style="width: 75px; float: right;"/>
-Installation on Arch is **majorly untested and is not officially supported** due to issues. Please keep this in mind when seeking support.
+Archへのインストールは**ほとんどテストされておらず、問題のために公式にはサポートされていません**。 サポートを求めるときは、このことに注意してください。
 
 ~~~ bash
-# Update system packages
+# システムパッケージを更新する
 sudo pacman -Syu
 
-# Install dependencies
+# 依存関係をインストールする
 sudo pacman -S git python python-pip opus libffi libsodium ncurses gdbm glibc zlib sqlite tk openssl ffmpeg
 
-# Clone the MusicBot to your home directory
+# MusicBotをホームディレクトリに複製します
 cd ~
 git clone https://github.com/Just-Some-Bots/MusicBot.git MusicBot -b master
 cd MusicBot
 
-# Install dependencies
+# 依存関係をインストールする
 sudo pip install --upgrade pip
 sudo pip install --upgrade -r requirements.txt
 ~~~
 
-Once everything has been completed, you can go ahead and [configure]({{ site.baseurl }}/using/configuration) the bot and then run with `sh ./run.sh`.
+すべてが完了したら、ボットを[configure]({{site.baseurl}}/using/configuration)して、 `sh ./run.sh`で実行できます。
