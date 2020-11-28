@@ -4,21 +4,21 @@ category: Using the bot
 order: 1
 ---
 
-Configuring the bot is relatively straight forward. First, open your bot folder and then the `config` folder within it. Copy `example_options.ini` to `options.ini`. This will be the file that you save your configuration into. Open it with a code editor like Notepad++, Atom, or Visual Studio Code.
+ボットの構成は比較的簡単です。 まず、ボットフォルダーを開き、次にその中の `config`フォルダーを開きます。 `example_options.ini`を` options.ini`にコピーします。 これは、構成を保存するファイルになります。 Notepad ++、Atom、Visual StudioCodeなどのコードエディターで開きます。
 
-> Editing your configuration file using Notepad or WordPad will result in problems as they save files in strange formats and aren't designed for editing .ini files.
+> メモ帳またはワードパッドを使用して構成ファイルを編集すると、ファイルが奇妙な形式で保存され、.iniファイルを編集するように設計されていないため、問題が発生します。
 
 #### Credentials
 
 <img class="doc-img" src="{{ site.baseurl }}/images/token.png" alt="Token" style="width: 500px;"/>
 
-- `Token` - *This is the only required option for your bot to run.* You must provide the token for your Discord bot account. To create a bot account, go to your [applications page](https://discordapp.com/developers/applications/me) (logging in if prompted), and then follow this [10 second video](https://drive.google.com/file/d/1wZG_TBVfjQfj0CEYaRTzS60D-cbfeeYZ/view). If you followed it entirely, you should have revealed your token and can now copy it into the config file.
+- `Token` - *これはボットを実行するために必要な唯一のオプションです。* Discordボットアカウントのトークンを提供する必要があります。 ボットアカウントを作成するには、[アプリケーションページ](https://discordapp.com/developers/applications/me)にアクセスし(プロンプトが表示されたらログイン)、この[10秒のビデオ](https://drive.google.com/file/d/1wZG_TBVfjQfj0CEYaRTzS60D-cbfeeYZ/view)。 それを完全に実行した場合は、トークンを公開して、構成ファイルにコピーできるようになっているはずです。
 
-After creating a bot account, you should probably add your bot to a server by clicking the 'Generate OAuth2 URL' button on the application page and copying the URL in the box to your address bar and pressing enter. You can then select what server you wish to add it to.
+ボットアカウントを作成したら、アプリケーションページの[Generate OAuth2 URL]ボタンをクリックし、ボックス内のURLをアドレスバーにコピーしてEnterキーを押すことにより、ボットをサーバーに追加する必要があります。 次に、追加するサーバーを選択できます。
 {: .info }
 
-- `Spotify_ClientID` - The client ID for your Spotify application. Required for the bot's [Spotify integration]({{ site.baseurl }}/using/spotify).
-- `Spotify_ClientSecret` - The client secret for your Spotify applicaton. Required for the bot's [Spotify integration]({{ site.baseurl }}/using/spotify).
+- `Spotify_ClientID` - SpotifyアプリケーションのクライアントID。 ボットの[Spotify integration]({{site.baseurl}}/using/spotify)に必要です。
+- `Spotify_ClientSecret` - Spotifyアプリケーションのクライアントシークレット。 ボットの[Spotify integration]({{site.baseurl}}/using/spotify)に必要です。
 
 #### Permissions
 
