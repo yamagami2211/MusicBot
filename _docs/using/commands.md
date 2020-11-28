@@ -4,50 +4,50 @@ category: Using the bot
 order: 2
 ---
 
-This is a list of the commands that can be used to control the MusicBot. You cannot use commands in private messages. Every command starts with the prefix that you [configured]({{ site.baseurl }}/using/configuration). This page assumes your prefix is `!`, the default. Required parameters are indicated with `<` and `>`, while optional parameters are indicated with `[` and `]`.
+これは、MusicBotを制御するために使用できるコマンドのリストです。 プライベートメッセージでコマンドを使用することはできません。 すべてのコマンドは、[構成]({{site.baseurl}}/using/configuration)のプレフィックスで始まります。 このページでは、プレフィックスがデフォルトの `!`であると想定しています。 必須パラメータは `<`と `>`で示され、オプションパラメータは `[`と `]`で示されます。
 
 #### General
 
-- `!help [command]` - Prints a list of commands, or info on a command if one is specified.
-- `!play <URL/query>` - Plays audio from a specific URL or searches for a query on YouTube and queues the first result.
-- `!queue` - Displays all of the media that is queued.
-- `!np` - Displays the media that is currently being played.
-- `!skip` - Vote to skip the current media. Required skips/skip ratio is set in the config file. The bot's owner will instantly skip when using `!skip f`.
-- `!search [service] [#] <query>` - Searches a specific service (default: YT) for a query and returns the first few results (default: 3, limit: 10). The user can then select from the results if they want to add any to the queue.
-- `!shuffle` - Shuffles the queue.
-- `!clear` - Clears the queue.
-- `!pause` - Pauses the current media.
-- `!resume` - Resumes the current media
-- `!volume [number]` - Sets the volume of the bot for everyone. Should be a number between 1 and 100. Can be relative (e.g `+10` to add 10 to current volume). If no parameter is given, it will display the current volume.
-- `!summon` - Connects the bot to your current voice channel, if it has permission.
-- `!clean <number>` - Searches through the number of messages given and deletes those that were sent by the bot, effectively cleaning the channel. If the bot has `Manage Messages` on the server, it will delete user command messages too, like `!play`.
-- `!blacklist <status> <@user1>...` - Add or remove users from the blacklist. Blacklisted users cannot use any bot commands. This overrides any permissions settings set in the permissions file. The owner cannot be blacklisted. Multiple users can be specified in the command. Users must be @mentioned. Status should be either `+`, `-`, `add`, or `remove`.
-- <span class="badge warn">deprecated</span> `!id [@user]` - Prints the user's ID in the chat, or prints the ID of the specified user. User must be @mentioned if not yourself.
-- <span class="badge warn">deprecated</span> `!listids` - Sends a message to the user with a list of all of the IDs on the server, so that permissions and such can be configured.
-- `!perms` - Sends a message to the user with their bot permissions.
-- `!stream <url>` - Streams a URL. This can be a Twitch, YouTube, etc livestream, or a radio stream. This feature of the bot is experimental and may have some issues.
-- `!save` - Saves the current song to the autoplaylist.
-- `!karaoke` - Enables karaoke mode in a server. During karaoke mode, only users with the `BypassKaraokeMode` permission can queue music.
+- `!help [command]` - コマンドのリスト、または指定されている場合はコマンドに関する情報を出力します。
+- `!play <URL/query>` -特定のURLから音声を再生するか、YouTubeでクエリを検索して、最初の結果をキューに入れます。
+- `!queue` - キューに入れられているすべてのメディアを表示します。
+- `!np` - 現在再生中のメディアを表示します。
+- `!skip` - 現在のメディアをスキップするために投票してください。 必要なスキップ/スキップ率は設定ファイルで設定されます。 `!skip f`を使用すると、ボットの所有者は即座にスキップします。
+- `!search [service] [#] <query>` - 特定のサービス（デフォルト：YT）でクエリを検索し、最初のいくつかの結果（デフォルト：3、制限：10）を返します。 その後、ユーザーは結果からキューに追加するかどうかを選択できます。
+- `!shuffle` - キューをシャッフルします。
+- `!clear` - キューをクリアします。
+- `!pause` - 現在のメディアを一時停止します。
+- `!resume` - 現在のメディアを再開します
+- `!volume [number]` - 全員のボットの音量を設定します。 1から100までの数値である必要があります。相対値にすることができます（たとえば、現在のボリュームに10を追加するには `+ 10`）。 パラメータが指定されていない場合は、現在のボリュームが表示されます。
+- `!summon` - 許可があれば、ボットを現在の音声チャネルに接続します。
+- `!clean <number>` - 与えられたメッセージの数を検索し、ボットによって送信されたメッセージを削除して、チャネルを効果的にクリーンアップします。 ボットがサーバー上に「メッセージの管理」を持っている場合、「!play」のようなユーザーコマンドメッセージも削除します。
+- `!blacklist <status> <@user1>...` - ブラックリストからユーザーを追加または削除します。 ブラックリストに登録されたユーザーは、ボットコマンドを使用できません。 これにより、権限ファイルに設定されている権限設定が上書きされます。 所有者をブラックリストに登録することはできません。 コマンドで複数のユーザーを指定できます。 ユーザーは@言及する必要があります。 ステータスは、 `+`、 `-`、` add`、または `remove`のいずれかである必要があります。
+- <span class="badge warn">非推奨</span> `!id [@user]` - チャットでユーザーのIDを出力するか、指定したユーザーのIDを出力します。 あなた自身でない場合、ユーザーは@言及されなければなりません。
+- <span class="badge warn">非推奨</span> `!listids` - サーバー上のすべてのIDのリストを含むメッセージをユーザーに送信して、アクセス許可などを構成できるようにします。
+- `!perms` - ボット権限を持つユーザーにメッセージを送信します。
+- `!stream <url>` - URLをストリーミングします。 これは、Twitch、YouTubeなどのライブストリーム、またはラジオストリームの場合があります。 ボットのこの機能は実験的なものであり、いくつかの問題がある可能性があります。
+- `!save` - 現在の曲を自動再生リストに保存します。
+- `!karaoke` - サーバーでカラオケモードを有効にします。 カラオケモード中は、 `BypassKaraokeMode`権限を持つユーザーのみが音楽をキューに入れることができます。
 
 #### Admin
 
-- `!joinserver` - Provides the URL that can be used to add the bot to another server. This command is always restricted to the owner of the bot.
-- `!leaveserver <name/id>` - Forces the bot to leave a server. You must specify either the server name or id.
-- `!pldump <playlist>` - Collects URLs from a YouTube playlist or Soundcloud set and dumps them into a text file that can be copied into the autoplaylist.
-- `!setavatar [url]` - Changes the bot's avatar to the specified URL or uploaded image. A URL does not need to be specified if an image is uploaded with the command as the message (comment).
-- `!setname <name>` - Changes the bot's Discord username (not nickname). Discord limits these changes to 2/hr.
-- `!setnick <nick>` - Changes the bot's nickname on a server, if it has permission to do so.
-- `!disconnect` - Disconnects the bot from the voice channel.
-- `!restart` - Restarts the bot.
-- `!shutdown` - Shuts down the bot and terminates the process.
-- `!option <option> <y/n>` - Changes a config option without restarting the bot for the current session. Run `!help option` for info.
-- `!remove <number>` - Removes a song from the queue by its numbered position. Use `!queue` to find out song positions.
-- `!resetplaylist` - Resets all songs in the server's autoplaylist.
+- `!joinserver` - ボットを別のサーバーに追加するために使用できるURLを提供します。 このコマンドは常にボットの所有者に制限されています。
+- `!leaveserver <name/id>` - ボットにサーバーからの離脱を強制します。 サーバー名またはIDのいずれかを指定する必要があります。
+- `!pldump <playlist>` - YouTubeプレイリストまたはSoundcloudセットからURLを収集し、自動再生リストにコピーできるテキストファイルにダンプします。
+- `!setavatar [url]` - ボットのアバターを指定されたURLまたはアップロードされた画像に変更します。 コマンドをメッセージ（コメント）としてアップロードする場合は、URLを指定する必要はありません。
+- `!setname <name>` - ボットのDiscordユーザー名（ニックネームではない）を変更します。 Discordは、これらの変更を2 / hrに制限します。
+- `!setnick <nick>` - サーバー上のボットのニックネームを変更する権限がある場合は、変更します。
+- `!disconnect` - ボットを音声チャネルから切断します。
+- `!restart` - ボットを再起動します。
+- `!shutdown` - ボットをシャットダウンし、プロセスを終了します。
+- `!option <option> <y/n>` - 現在のセッションのボットを再起動せずに構成オプションを変更します。 詳細については、 `!help option`を実行してください。
+- `!remove <number>` - 番号付きの位置でキューから曲を削除します。 `!queue`を使用して曲の位置を見つけます。
+- `!resetplaylist` - サーバーの自動再生リスト内のすべての曲をリセットします。
 
 #### Dev
 
-> These commands are intended for people who know how Python works and/or developers of the bot. As such, they are restricted behind additional permissions that must be granted in the options file. Please do not run any of these commands unless you are absolutely sure that you are aware what you are doing and the potential consequences, as they can be very dangerous.
+> これらのコマンドは、Pythonの動作を知っている人やボットの開発者を対象としています。 そのため、オプションファイルで付与する必要のある追加のアクセス許可の背後で制限されています。 これらのコマンドは非常に危険である可能性があるため、自分が何をしているか、および潜在的な結果を確実に認識している場合を除いて、これらのコマンドを実行しないでください。
 
-- `!breakpoint` - Activates a debugging breakpoint.
-- `!objgraph [func]` - Returns an object graph.
-- `!debug` - Evaluates arbitrary code. This can be an extremely dangerous command.
+- `!breakpoint` - デバッグブレークポイントをアクティブにします。
+- `!objgraph [func]` - オブジェクトグラフを返します。
+- `!debug` - 任意のコードを評価します。 これは非常に危険なコマンドになる可能性があります。
