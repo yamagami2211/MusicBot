@@ -10,7 +10,7 @@ MusicBotはSpotifyとの統合が制限されており、SpotifyURIをYouTubeで
 ## Spotify統合の有効化
 
 1. まず、新しい[Spotifyアプリケーション](https://beta.developer.spotify.com/dashboard/applications)を作成します。 Spotifyアカウントにログインするように求められます。 そうしてから、右上の[アプリの作成]をクリックし、商用統合を開発しているかどうかを尋ねられたら[いいえ]をクリックします。 好きな名前を付けて、簡単に説明してください。 3つのボックスすべてにチェックマークを付けてから、[作成]を押します。
-2. 最後に、Spotifyアプリケーションページで取得できるSpotifyクライアントIDとクライアントシークレットを使用してボットを[configuration]({{ site.baseurl }}/using/configuration)に記入します。 ボットを再起動し、詳細に問題がなければ、 `！play`コマンドでSpotifyURIを使用できるようになります。
+2. 最後に、Spotifyアプリケーションページで取得できるSpotifyクライアントIDとクライアントシークレットを使用してボットを[configuration]({{ site.baseurl }}/using/configuration)に記入します。 ボットを再起動し、詳細に問題がなければ、 `!play`コマンドでSpotifyURIを使用できるようになります。
 
 ## サポートされているURI
 
