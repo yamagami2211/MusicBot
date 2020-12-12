@@ -22,45 +22,45 @@ order: 1
 
 #### Permissions
 
-> This section is about the config options in options.ini. For help with the actual permissions file, see [here]({{ site.baseurl }}/using/permissions).
+> このセクションでは、options.iniの構成オプションについて説明します。 実際のアクセス許可ファイルのヘルプについては、[ここ]({{ site.baseurl }}/using/permissions)を参照してください。
 
-- `OwnerID` - The ID of your Discord user, who will gain full permissions for the bot. If this is set to `auto`, the bot will automatically determine its owner from who created the bot account
-- `DevIDs` - The IDs of every Discord user that you would like to gain developer commands. These commands are dangerous and allow execution of arbitrary code. If you don't know what you're doing, don't add any IDs here
+- `OwnerID` - ボットの完全な権限を取得するDiscordユーザーのID。 これが `auto`に設定されている場合、ボットはボットアカウントを作成した所有者を自動的に決定します
+- `DevIDs` - 開発者コマンドを取得したいすべてのDiscordユーザーのID。 これらのコマンドは危険であり、任意のコードの実行を許可します。 何をしているのかわからない場合は、ここにIDを追加しないでください
 
 #### Chat
 
-- `CommandPrefix` - The prefix that will be used before every command, e.g if my prefix is `!`, I would use `!play` to queue a song
-- `BindToChannels` - You can enter text channel IDs in here (seperated by spaces) to only allow the bot to respond in those channels
-- `AutojoinChannels` - You can enter voice channel IDs in here (seperated by spaces) to force the bot to join those channels on launch (one per server)
+- `CommandPrefix` - すべてのコマンドの前に使用されるプレフィックス。たとえば、プレフィックスが `!`の場合、 `!play`を使用して曲をキューに入れます。
+- `BindToChannels` - ここにテキストチャネルIDを（スペースで区切って）入力して、ボットがそれらのチャネルでのみ応答できるようにすることができます
+- `AutojoinChannels` - ここに音声チャネルIDを（スペースで区切って）入力して、起動時にボットをそれらのチャネルに強制的に参加させることができます（サーバーごとに1つ）
 
 #### MusicBot
 
-- `DefaultVolume` - The volume that your bot starts at when launched, between `0.01` and `1.0`. Recommended: `0.15`
-- <span class="badge warn">deprecated</span> `WhiteListCheck` - If enabled, the bot can only be used by users whose IDs are in `whitelist.txt`.
-- `SkipsRequired` & `SkipsRatio` - The required amount/ratio of votes to skip before skipping. The lower value of the two is used. Deafened users and the owner does not count towards the ratio
-- `SaveVideos` - Whether videos should be saved to the disk for if they are queued again. If you care about disk space, keep this disabled
-- `NowPlayingMentions` - Whether to mention the user that requested a song when their song starts playing
-- `AutoSummon` - Whether the bot should automatically connect to the owner's voice channel on startup. This takes precendence over `AutojoinChannels`
-- `UseAutoPlaylist` - Whether to play music from `autoplaylist.txt` when joining a voice channel and when nothing is queued
-- `AutoPlaylistRandom` - Whether the autoplaylist should play music randomly or sequentially when it is enabled
-- `AutoPause` - Whether the bot should pause if nobody is in the voice channel
-- `DeleteMessages` - Whether the bot should delete its messages after a short period of time
-- `DeleteInvoking` - Whether the bot should delete user command messages after a short period of time. `DeleteMessages` must be enabled for this to work too
-- `PersistentQueue` - Whether the bot should save the queue to the disk regularly so it can recover if it is unexpectedly shutdown
-- `DebugLevel` - Determines what messages are logged. This is generally not needed to be changed unless you are asked to do so when receiving support
-- `StatusMessage` - Allows users to specify a custom "Playing" status message for the bot, rather than the dynamic ones the bot provides
-- `WriteCurrentSong` - Whether the bot should write the current song to a text file on the disk, which can then be used in OBS or other software
-- `AllowAuthorSkip` - Whether the person who queues a song should be allowed to instantly skip it if they use `!skip f`
-- `UseExperimentalEqualization` - Whether the bot should try to equalize tracks to ensure they play at a consistent volume
-- `UseEmbeds` - Whether the bot should use Discord embeds when sending messages
-- `QueueLength` - How many songs should appear in the `queue` command
-- `RemoveFromAPOnError` - Whether the bot should remove songs from the autoplaylist if there is an error
-- `ShowConfigOnLaunch` - Whether the bot should print the configuration options when it starts
-- `LegacySkip` - Whether to use legacy skip behavior, defaulting `!skip` to force skip
-- `LeaveServersWithoutOwner` - Whether the bot should leave servers that the owner is not found in
-- `UseAlias` - Whether the bot should use aliases defined in `aliases.json`
-- <span class="badge major">review only</span> `CustomEmbedFooter` - Changes the footer text found in embeds from the default version footer
+- `DefaultVolume` - ボットが起動されたときに開始するボリューム( `0.01`～` 1.0` )。 推奨: `0.15`
+- <span class="badge warn">非推奨</span> `WhiteListCheck` - 有効にすると、ボットはIDが `whitelist.txt`にあるユーザーのみが使用できます。
+- `SkipsRequired` & `SkipsRatio` - スキップする前にスキップするために必要な投票の量/比率。 2つのうち低い方の値が使用されます。 参加していないユーザーと所有者は比率にカウントされません
+- `SaveVideos` - ビデオが再びキューに入れられる場合に備えて、ビデオをディスクに保存する必要があるかどうか。 ディスク容量が気になる場合は、これを無効にしてください
+- `NowPlayingMentions` - 曲の再生開始時に曲をリクエストしたユーザーについて言及するかどうか
+- `AutoSummon` - ボットが起動時に所有者の音声チャネルに自動的に接続する必要があるかどうか。 これは `AutojoinChannels`よりも優先されます
+- `UseAutoPlaylist` - 音声チャンネルに参加するとき、および何もキューに入れられていないときに、 `autoplaylist.txt`から音楽を再生するかどうか
+- `AutoPlaylistRandom` - 自動再生リストを有効にしたときに、音楽をランダムに再生するか、順番に再生するか
+- `AutoPause` - 音声チャネルに誰もいない場合にボットを一時停止するかどうか
+- `DeleteMessages` - ボットが短時間後にメッセージを削除する必要があるかどうか
+- `DeleteInvoking` - ボットが短時間後にユーザーコマンドメッセージを削除する必要があるかどうか。 これも機能させるには、 `DeleteMessages`を有効にする必要があります
+- `PersistentQueue` - ボットがキューを定期的にディスクに保存して、予期せずシャットダウンされた場合に回復できるようにするかどうか
+- `DebugLevel` - ログに記録されるメッセージを決定します。 サポートを受けるときに変更するように求められない限り、これは通常変更する必要はありません。
+- `StatusMessage` - ボットが提供する動的メッセージではなく、ボットのカスタム「再生中」ステータスメッセージをユーザーが指定できるようにします
+- `WriteCurrentSong` - ボットが現在の曲をディスク上のテキストファイルに書き込む必要があるかどうか。このテキストファイルは、OBSまたは他のソフトウェアで使用できます。
+- `AllowAuthorSkip` - `!skip f`を使用する場合、曲をキューに入れる人がすぐにスキップできるようにするかどうか
+- `UseExperimentalEqualization` - ボットがトラックを均等化して、一定の音量で再生できるようにするかどうか
+- `UseEmbeds` - ボットがメッセージを送信するときにDiscord埋め込みを使用する必要があるかどうか
+- `QueueLength` - `!queue`コマンドに表示する曲の数
+- `RemoveFromAPOnError` - エラーが発生した場合にボットが自動再生リストから曲を削除する必要があるかどうか
+- `ShowConfigOnLaunch` - ボットが起動時に構成オプションを出力する必要があるかどうか
+- `LegacySkip` - 従来のスキップ動作を使用するかどうか。デフォルトで `!skip`を使用してスキップを強制します。
+- `LeaveServersWithoutOwner` - ボットが所有者が見つからないサーバーを離れるべきかどうか
+- `UseAlias` - ボットが `aliases.json`で定義されたエイリアスを使用する必要があるかどうか
+- <span class="badge major">レビュー版のみ</span> `CustomEmbedFooter` - 埋め込みで見つかったフッターテキストをデフォルトバージョンのフッターから変更します
 
 #### Files
 
-- `i18nFile` - The internationalization file to use for the bot (relative path, e.g `config/i18n/en.json`)
+- `i18nFile` - ボットに使用する国際化ファイル (相対パスで記入する, e.g `config/i18n/en.json`)
