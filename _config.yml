@@ -3,10 +3,10 @@
 
 title: MusicBot-jp
 description: Fork元の非公式日本語化サイトです。
-url: "https://yamagami2211.github.io/MusicBot-jp/"
+url: "https://musicbot-jp.pages.dev"
 logo: 'images/logo.png'
-google_analytics_key: G-2EWS5XTDBT
-google_tag_key: GTM-N3TPVDP
+google_analytics_key: G-NFERHTD6MZ
+google_tag_key: GTM-K4F47X4
 show_full_navigation: true
 
 timezone: Asia/Tokyo

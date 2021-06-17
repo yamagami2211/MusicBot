@@ -4,16 +4,16 @@ category: Using the bot
 order: 6
 ---
 
-This is a table of common issues and solutions for the bot. Please check here before leaving an issue on GitHub or asking for help in our [support server](https://discord.gg/bots).
+これは、ボットの一般的な問題と解決策の表です。 GitHubに問題を残す前、または[サポートサーバー](https://discord.gg/bots)でヘルプを求める前に、ここを確認してください。
 
 Issue | Solution
 --- | ---
-`Bot was not installed using Git` | You didn't install the bot correctly. Rather than downloading a ZIP, you must install using Git. Use our official installation guides rather than a YouTube video.
-Lagging while playing music | Check your CPU and disk usage. Ensure that you have enough bandwidth. Check your voice channel's bitrate. Check there isn't a [Discord issue](https://status.discordapp.com).
-`Bot can't login, bad credentials` | Check you copied the correct token from your [bot application page](https://discordapp.com/developers/applications/me) into your config file. It is called **Token**, not Client Secret.
-`WebSocket connection is closed` | The bot tries to handle websocket disconnects, but sometimes there can be a problem, for example if Discord's voice servers go down. Try restarting the bot or switching server region if this error is persistent.
-`./run.sh: command not found` | While Git *should* preserve file permissions, you may need to set `run.sh` to be executable by running `chmod a+x run.sh`.
-`Your config file is missing some options.` | This will usually occur if you have updated the bot. In order to avoid issues, bot updates do **not** update your config file with new options, but **do** update `example_options.ini`. Therefore, you should check that file and copy new options to your config file when you can (or delete your config file and re-configure entirely). The bot will use default settings for the missing options until you configure them, so the message is only a warning and will not impact the bot's performance.
-`git: unable to access 'https://github.com/Just-Some-Bots/MusicBot.git' SSL certificate problem: self signed certificate in certificate chain` | Try disabling your antivirus. Some antivirus software is known to interfere with git.
-`ValueError: Invalid format '.' for '%' style` | You're likely using Python 3.8 with the master branch of the bot. Resolving this is as simple as either installing [Python 3.7](https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe), or updating to review by running `git checkout review`
-`TypeError: __new__() got an unexpected keyword argument 'deny_new'` | This occurs due to an outdated version of `discord.py`. To resolve this, update `discord.py` with the following command: `python -m pip install -U discord.py[voice]`
+`Bot was not installed using Git` | ボットを正しくインストールしませんでした。 ZIPをダウンロードするのではなく、Gitを使用してインストールする必要があります。 YouTubeビデオではなく、公式のインストールガイドを使用してください。
+音楽を再生しながら遅れる| CPUとディスクの使用状況を確認してください。 十分な帯域幅があることを確認してください。 音声チャネルのビットレートを確認してください。 [Discordの問題](https://status.discordapp.com)がないことを確認してください。
+`Bot can't login, bad credentials` | [ボットアプリケーションページ](https://discordapp.com/developers/applications/me)から構成ファイルに正しいトークンをコピーしたことを確認してください。 これは、クライアントシークレットではなく、**トークン**と呼ばれます。
+`WebSocket connection is closed` | ボットはWebSocketの切断を処理しようとしますが、Discordの音声サーバーがダウンした場合などに問題が発生する場合があります。 このエラーが続く場合は、ボットを再起動するか、サーバーリージョンを切り替えてみてください。
+`./run.sh: command not found` | Gitはファイルのパーミッションを保持する必要がありますが、 `chmod a + x run.sh`を実行して、` run.sh`を実行可能に設定する必要がある場合があります。
+`Your config file is missing some options.` | これは通常、ボットを更新した場合に発生します。 問題を回避するために、ボットの更新では構成ファイルを新しいオプションで更新しませんが、 `example_options.ini`を更新します。 したがって、可能であれば、そのファイルを確認し、新しいオプションを構成ファイルにコピーする必要があります（または、構成ファイルを削除して完全に再構成します）。 ボットは、構成するまで不足しているオプションのデフォルト設定を使用するため、メッセージは単なる警告であり、ボットのパフォーマンスに影響を与えることはありません。
+`git: unable to access 'https://github.com/Just-Some-Bots/MusicBot.git' SSL certificate problem: self signed certificate in certificate chain` | ウイルス対策を無効にしてみてください。 一部のウイルス対策ソフトウェアは、gitに干渉することが知られています。
+`ValueError: Invalid format '.' for '%' style` | ボットのマスターブランチでPython3.8を使用している可能性があります。 これを解決するには、[Python 3.7](https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe)をインストールするか、実行してレビュー用に更新するだけです。 `git checkout review`
+`TypeError: __new__() got an unexpected keyword argument 'deny_new'` | これは、古いバージョンの `discord.py`が原因で発生します。 これを解決するには、次のコマンドで `discord.py`を更新します。`python -m pip install -U discord.py[voice]`
